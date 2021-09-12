@@ -12,40 +12,43 @@
 	</head>
 <body>
 
-	<div class="jumbotron">
+	<div class="container">
+		<div class="jumbotron">
 		<h1>Pink and Green</h1>
+		</div>
+
+		<p>Every time you click the button, get random pink and green friends:</p>
+
+		<button class="btn" onclick="generatePinkAndGreen()">Click Me</button>
+
+		<p id="demo"></p>
+		<p id="demo2"></p>
 	</div>
 	
-<p>Every time you click the button, get random pink and green friends:</p>
+	
+	<script>
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
 
-<button class="btn" onclick="generatePinkAndGreen()">Click Me</button>
+	function generatePinkAndGreen() {
+	    var element = document.getElementById("demo");
+	    var r = getRandomInt(10, 30);
+	    var g = getRandomInt(100, 255);
+	    var b = getRandomInt(30, 100);
 
-<p id="demo"></p>
-<p id="demo2"></p>
+	    var element2 = document.getElementById("demo2");
+	    var r2 = getRandomInt(250, 255);
+	    var g2= getRandomInt(140, 180);
+	    var b2 = getRandomInt(140, 200);
 
-<script>
-function getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+	    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+	    document.getElementById("demo").innerText= r + " " + g + " " + b;
 
-function generatePinkAndGreen() {
-    var element = document.getElementById("demo");
-    var r = getRandomInt(10, 30);
-    var g = getRandomInt(100, 255);
-    var b = getRandomInt(30, 100);
-    
-    var element2 = document.getElementById("demo2");
-    var r2 = getRandomInt(250, 255);
-    var g2= getRandomInt(140, 180);
-    var b2 = getRandomInt(140, 200);
-    
-    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-    document.getElementById("demo").innerText= r + " " + g + " " + b;
-    
-    element2.style.backgroundColor = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
-    document.getElementById("demo2").innerText = r2 + " " + g2 + " " + b2;
-}
-</script>
+	    element2.style.backgroundColor = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+	    document.getElementById("demo2").innerText = r2 + " " + g2 + " " + b2;
+	}
+	</script>
 
 </body>
 </html>
