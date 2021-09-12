@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
+	<head>
+	    <meta charset="utf-8">
+	    <title>Pink and Green are Friends</title>
+
+	    <!-- Bootstrap CSS -->
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	</head>
 <body>
 
-<h2>Pink and Green</h2>
-
+	<div class="jumbotron">
+		<h1>Pink and Green</h1>
+	</div>
+	
 <p>Every time you click the button, get random pink and green friends:</p>
 
-<button onclick="generatePinkAndGreen()">Click Me</button>
+<button class="btn" onclick="generatePinkAndGreen()">Click Me</button>
 
 <p id="demo"></p>
 <p id="demo2"></p>
@@ -28,10 +37,10 @@ function generatePinkAndGreen() {
     var b2 = getRandomInt(140, 200);
     
     element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-    document.getElementById("demo").innerHTML = r + " " + g + " " + b;
+    document.getElementById("demo").innerText= r + " " + g + " " + b;
     
     element2.style.backgroundColor = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
-    document.getElementById("demo2").innerHTML = r2 + " " + g2 + " " + b2;
+    document.getElementById("demo2").innerText = r2 + " " + g2 + " " + b2;
 }
 </script>
 
