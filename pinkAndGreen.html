@@ -12,17 +12,23 @@
 	</head>
 <body>
 
-	<div class="container">
+	<div class="container p-3 my-3 border">
 		<div class="jumbotron">
-		<h1>Pink and Green</h1>
+			<h1>Pink and Green</h1>
+			<p>Every time you click the button, get random pink and green friends:</p>
 		</div>
 
-		<p>Every time you click the button, get random pink and green friends:</p>
-
-		<button class="btn" onclick="generatePinkAndGreen()">Click Me</button>
-
-		<p id="demo"></p>
-		<p id="demo2"></p>
+		
+		<div class="container p-3 my-3">
+			<button class="btn btn-secondary" onclick="generatePinkAndGreen()">Click Me</button>
+		</div>
+		
+		<div class="container p-3 my-3">
+			<p id="demo"></p>
+			<p id="demo2"></p>
+		</div>
+		
+		
 	</div>
 	
 	
@@ -43,10 +49,10 @@
 	    var b2 = getRandomInt(140, 200);
 
 	    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-	    document.getElementById("demo").innerText= r + " " + g + " " + b;
+	    document.getElementById("demo").innerText= "RGB: " + r + " " + g + " " + b;
 
 	    element2.style.backgroundColor = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
-	    document.getElementById("demo2").innerText = r2 + " " + g2 + " " + b2;
+	    document.getElementById("demo2").innerText = "RGB: " + r2 + " " + g2 + " " + b2;
 	}
 	</script>
 
