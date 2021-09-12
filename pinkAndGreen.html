@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pink and Green</h2>
+
+<p>Every time you click the button, get random pink and green friends:</p>
+
+<button onclick="generatePinkAndGreen()">Click Me</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generatePinkAndGreen() {
+    var element = document.getElementById("demo");
+    var r = getRandomInt(10, 30);
+    var g = getRandomInt(100, 255);
+    var b = getRandomInt(30, 100);
+    
+    var element2 = document.getElementById("demo2");
+    var r2 = getRandomInt(250, 255);
+    var g2= getRandomInt(140, 180);
+    var b2 = getRandomInt(140, 200);
+    
+    element.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+    document.getElementById("demo").innerHTML = r + " " + g + " " + b;
+    
+    element2.style.backgroundColor = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+    document.getElementById("demo2").innerHTML = r2 + " " + g2 + " " + b2;
+}
+</script>
+
+</body>
+</html>
